@@ -1,0 +1,16 @@
+doctype html
+html
+  head
+  body
+    h1 Ejemplo Auth
+    h2 HOME
+    if user
+      p Hola de nuevo, #{user.username}   
+    form(action="/login" method="post")
+      label Usuario  
+      input(name="username")
+      br  
+      label Contraseña
+      input(name="password" type="password")
+      br
+      button(type="submit") Ingresar
